@@ -33,7 +33,7 @@ func (h *Handler) CreateUser(c *gin.Context) {
 		c.JSON(http.StatusOK, res)
 	}
 
-func (h *Handler) Login(c *gin.Context) {
+func (h *Handler) LoginUser(c *gin.Context) {
 	var user LoginUserReq
 	if err := c.ShouldBindJSON(&user); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error() })
